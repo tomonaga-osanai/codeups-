@@ -1,0 +1,61 @@
+@use "global" as *;
+
+.logo {
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  gap: rem(6);
+}
+
+.logo_left {
+  justify-content: center;
+}
+
+.logo__icon {
+}
+
+.logo__icon img {
+  width: rem(64);
+  height: rem(64);
+}
+
+.logo__icon_header_sp img {
+  width: rem(42.168);
+  height: rem(42.168);
+
+  @include mq("md") {
+    width: rem(64);
+    height: rem(64);
+    // display: none;
+  }
+}
+
+.logo__title {
+  position: relative;
+  // margin-bottom: rem(12);
+}
+
+.logo__title span {
+  font-size: rem(12);
+  position: absolute;
+  left: 0;
+  top: 20%;
+}
+
+.logo__title a {
+  color: $white;
+  font-family: HGSSoeiKakugothicUB;
+  font-size: rem(19.766);
+  line-height: 0;
+  letter-spacing: rem(0.988);
+
+  @include mq("md") {
+    font-size: rem(30);
+    letter-spacing: rem(1.5);
+  }
+}
+
+.logo__title_footer a {
+  font-size: rem(30);
+  letter-spacing: rem(1.5);
+}

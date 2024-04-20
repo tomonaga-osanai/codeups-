@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.header__drawer {
+  width: rem(60);
+  height: rem(60);
+  background-color: #7c0c0c;
+  position: absolute;
+  top: 0;
+  right:0;
+
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.header__drawer-sp {
+
+}
+
+

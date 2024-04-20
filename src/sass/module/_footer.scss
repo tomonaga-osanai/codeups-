@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.footer {
+  background: #7c0c0c;
+  text-align: center;
+  color: #fff;
+  padding-top: rem(47);
+  padding-bottom: rem(30);
+}
+
+.footer__company-name {
+  margin-top: rem(49);
+  font-size: rem(18);
+}
+
+.footer__address,
+.footer__tel {
+  margin-top: rem(20);
+  font-size: rem(15);
+  line-height: rem(22.5);
+  letter-spacing: rem(0.75);
+}
+
+.footer__nav {
+  margin-top: rem(60);
+}
+
+.footer_nav-items {
+  display: flex;
+  flex-direction: column;
+  gap: rem(30);
+}
+
+.footer_nav-item a {
+  letter-spacing: rem(0.8);
+}
+
+.footer__copyright {
+  margin-top: rem(90);
+  font-size: rem(14);
+}
