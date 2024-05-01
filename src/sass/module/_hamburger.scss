@@ -31,18 +31,18 @@
   left: rem(22);
 }
 
-.hamburger.is-open span:nth-child(1) {
+.hamburger.is-active span:nth-child(1) {
   width: rem(16);
   top: 15px;
   transform: rotate(45deg);
 }
 
-.hamburger.is-open span:nth-child(2) {
+.hamburger.is-active span:nth-child(2) {
   transform: translateY(-50%);
   opacity: 0;
 }
 
-.hamburger.is-open span:nth-child(3) {
+.hamburger.is-active span:nth-child(3) {
   top: 15px;
   transform: rotate(-45deg);
 }

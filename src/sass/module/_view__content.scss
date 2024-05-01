@@ -1,0 +1,57 @@
+@use "global" as *;
+
+.view__content {
+  margin-top: rem(30);
+}
+
+.view__content_center {
+  text-align: center;
+}
+
+.view__content_right {
+  text-align: right;
+}
+
+.view__inner {
+  padding: rem(10);
+  border-bottom: 1px solid #fff;
+  display: inline-block;
+}
+
+.view__link {
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+}
+
+.view__title {
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: rem(0.48);
+  color: #fff;
+}
+
+.view__icon {
+  width: rem(16);
+  height: rem(16);
+  background-color: #e31919;
+  border-radius: 50%;
+  position: relative;
+}
+
+.view__icon::after {
+  content: "";
+  position: absolute;
+  width: rem(5);
+  height: rem(6);
+  background-image: url(../../assets/images/common/arrow.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+

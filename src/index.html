@@ -25,10 +25,15 @@
       href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="./assets/js/script.js"></script>
   </head>
   <body>
@@ -44,9 +49,9 @@
         </div>
         <div class="header__drawer">
           <button class="header__drawer-sp hamburger js-hamburger">
-              <span></span>
-              <span></span>
-              <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </div>
         <nav class="header__pc-nav pc-nav">
@@ -58,16 +63,417 @@
             <li class="pc-nav__item"><a href="#">会社概要</a></li>
           </ul>
         </nav>
+        <nav class="header__sp-nav sp-nav js-sp-nav">
+          <ul class="sp-nav__items">
+            <li class="sp-nav__item"><a href="#">トップ</a></li>
+            <li class="sp-nav__item"><a href="#">お知らせ</a></li>
+            <li class="sp-nav__item"><a href="#">こだわり</a></li>
+            <li class="sp-nav__item"><a href="#">メニュー</a></li>
+            <li class="sp-nav__item"><a href="#">店舗情報</a></li>
+            <li class="sp-nav__item"><a href="#">会社概要</a></li>
+          </ul>
+        </nav>
+        <div class="circle-bg"></div>
       </div>
     </header>
+
     <main>
-      <div class="section-header">
-        <h2 class="section-header__title">about</h2>
-        <p class="section-header__subtitle">CodeUps亭のこだわり</p>
+      <div class="mv">
+        <div class="mv__inner">
+          <!-- <div class="mv__img1">
+            <img src="./assets/images/common/mv1.png" alt="焼き肉の画像１" />
+          </div> -->
+          <div class="mv__title">
+            <span>一口噛めば、旨味が走る。</span><br />
+            極上炭火焼肉。
+          </div>
+          <!-- <div class="mv__img2">
+            <img src="./assets/images/common/pc-mv2.png" alt="焼肉の画像２" />
+          </div> -->
+        </div>
       </div>
+
+      <section class="about inner">
+        <div class="about__inner">
+          <div class="section-header">
+            <h2 class="section-header__title">about</h2>
+            <p class="section-header__subtitle">CodeUps亭のこだわり</p>
+          </div>
+          <div class="about__items">
+            <div class="about__item">
+              <span>
+                <h3 class="about__title">厳選された極上肉</h3>
+                <p class="about__text">
+                  贅沢な焼肉体験を提供するため、<br class="u-mobile" />
+                  当店では産地や品質にこだわり抜きました。
+                </p>
+                <p class="about__text">
+                  新鮮で選りすぐりの肉を直接仕入れ、<br class="u-mobile" />
+                  一口噛むたびに広がる旨味と肉質の極上さが、<br
+                    class="u-mobile"
+                  />お客様に至福の瞬間をお届けします。
+                </p>
+              </span>
+            </div>
+            <div class="about__item">
+              <h3 class="about__title">季節感ある焼肉体験</h3>
+              <p class="about__text">
+                季節の変化に合わせた旬の食材を活かし、<br class="u-mobile" />
+                焼肉メニューも季節感豊かにアップデート。
+              </p>
+              <p class="about__text">
+                食材の鮮度と旬の味わいが<br class="u-mobile" />
+                一体となったメニューをご提供し、<br class="u-mobile" />
+                お客様に季節感ある美味しいひとときを<br class="u-mobile" />
+                お届けします。
+              </p>
+            </div>
+          </div>
+          <div class="view__content">
+            <div class="view__inner">
+              <a href="#" class="view__link">
+                <div class="view__title">view more</div>
+                <div class="view__icon"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu">
+        <div class="menu__inner inner">
+          <div class="section-header">
+            <h2 class="section-header__title">MENU</h2>
+            <p class="section-header__subtitle">メニュー</p>
+          </div>
+          <nav class="menu__nav">
+            <ul class="menu__nav-lists">
+              <li class="menu__nav-list"><a href="">焼肉</a></li>
+              <li class="menu__nav-list"><a href="">サイドメニュー</a></li>
+              <li class="menu__nav-list"><a href="">ご飯もの</a></li>
+              <li class="menu__nav-list"><a href="">デザート</a></li>
+              <li class="menu__nav-list"><a href="">食べ放題</a></li>
+            </ul>
+          </nav>
+          <div class="menu__items">
+            <div class="menu__item">
+              <div class="menu__img">
+                <img
+                  src="./assets/images/common/menu-img1.png"
+                  alt="盛り合わせの写真"
+                />
+              </div>
+              <div class="menu__img-title">盛り合わせ</div>
+            </div>
+            <div class="menu__item">
+              <div class="menu__img">
+                <img
+                  src="./assets/images/common/menu-img2.png"
+                  alt="数量限定"
+                />
+              </div>
+              <div class="menu__img-title">数量限定</div>
+            </div>
+            <div class="menu__item">
+              <div class="menu__img">
+                <img src="./assets/images/common/menu-img3.png" alt="カルビ" />
+              </div>
+              <div class="menu__img-title">カルビ</div>
+            </div>
+            <div class="menu__item">
+              <div class="menu__img">
+                <img src="./assets/images/common/menu-img4.png" alt="ロース" />
+              </div>
+              <div class="menu__img-title">ロース</div>
+            </div>
+            <div class="menu__item">
+              <div class="menu__img">
+                <img src="./assets/images/common/menu-img5.png" alt="ハラミ" />
+              </div>
+              <div class="menu__img-title">ハラミ</div>
+            </div>
+            <div class="menu__item">
+              <div class="menu__img">
+                <img src="./assets/images/common/menu-img6.png" alt="タン" />
+              </div>
+              <div class="menu__img-title">タン</div>
+            </div>
+            <div class="menu__item">
+              <div class="menu__img">
+                <img
+                  src="./assets/images/common/menu-img7.png"
+                  alt="ホルモン"
+                />
+              </div>
+              <div class="menu__img-title">ホルモン</div>
+            </div>
+            <div class="menu__item">
+              <div class="menu__img">
+                <img src="./assets/images/common/menu-img8.png" alt="鶏、豚" />
+              </div>
+              <div class="menu__img-title">鶏、豚</div>
+            </div>
+          </div>
+          <div class="view__content view__content_center">
+            <div class="view__inner">
+              <a href="#" class="view__link">
+                <div class="view__title">view more</div>
+                <div class="view__icon"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="location">
+        <div class="location__inner inner">
+          <div class="section-header section-header_left">
+            <h2 class="section-header__title">Location</h2>
+            <p class="section-header__subtitle">店舗情報</p>
+          </div>
+          <div class="swiper js-location-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide location__ly">
+                <div class="location__item">
+                  <div class="location__img">
+                    <img src="../assets/images/common/location1.jpg" alt="" />
+                  </div>
+                  <div class="location__body">
+                    <div class="location__title">CodeUps亭 池袋店</div>
+                    <div class="location__address">
+                      〒171-0014 東京都豊島区池袋4丁目102-20
+                    </div>
+                    <div class="location__tel">Tel: 03-3535-1515</div>
+                    <div class="location__tag">
+                      <div class="tab__name">個室あり</div>
+                      <div class="tab__name">貸切可</div>
+                      <div class="tab__name">24時間営業</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide location__ly">
+                <div class="location__item">
+                  <div class="location__img">
+                    <img src="../assets/images/common/location2.jpg" alt="" />
+                  </div>
+                  <div class="location__body">
+                    <div class="location__title">CodeUps亭 秋葉原店</div>
+                    <div class="location__address">
+                      〒101-0021 東京都千代田区外神田1丁目12
+                      東京都豊島区池袋4丁目102-20
+                    </div>
+                    <div class="location__tel">Tel: 03-3500-1234</div>
+                    <div class="location__tag">
+                      <div class="tab__name">座敷あり</div>
+                      <div class="tab__name">個室あり</div>
+                      <div class="tab__name">貸切可</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide location__ly">
+                <div class="location__item">
+                  <div class="location__img">
+                    <img src="../assets/images/common/location3.jpg" alt="" />
+                  </div>
+                  <div class="location__body">
+                    <div class="location__title">CodeUps亭 新宿店</div>
+                    <div class="location__address">
+                      〒160-0022 東京都新宿区新宿3丁目20-10
+                    </div>
+                    <div class="location__tel">Tel: 03-3579-7777</div>
+                    <div class="location__tag">
+                      <div class="tab__name">座敷あり</div>
+                      <div class="tab__name">個室あり</div>
+                      <div class="tab__name">貸切可</div>
+                      <div class="tab__name">24時間営業</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide location__ly">
+                <div class="location__item">
+                  <div class="location__img">
+                    <img src="../assets/images/common/location4.jpg" alt="" />
+                  </div>
+                  <div class="location__body">
+                    <div class="location__title">CodeUps亭 表参道店</div>
+                    <div class="location__address">
+                      〒150-0001 東京都渋谷区神宮前5丁目55-555 Code Upsビル7F
+                    </div>
+                    <div class="location__tel">Tel: 03-3579-1234</div>
+                    <div class="location__tag">
+                      <div class="tab__name">個室あり</div>
+                      <div class="tab__name">駐車場</div>
+                      <div class="tab__name">貸切可</div>
+                      <div class="tab__name">24時間営業</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide location__ly">
+                <div class="location__item">
+                  <div class="location__img">
+                    <img src="../assets/images/common/location5.jpg" alt="" />
+                  </div>
+                  <div class="location__body">
+                    <div class="location__title">CodeUps亭 三軒茶屋店</div>
+                    <div class="location__address">
+                      〒154-0024 東京都世田谷区三軒茶屋2丁目46-7
+                    </div>
+                    <div class="location__tel">Tel: 03-3579-9876</div>
+                    <div class="location__tag">
+                      <div class="tab__name">座敷あり</div>
+                      <div class="tab__name">個室あり</div>
+                      <div class="tab__name">駐車場</div>
+                      <div class="tab__name">貸切可</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination js-location-pagination"></div>
+          <div class="view__content view__content_right">
+            <div class="view__inner">
+              <a href="#" class="view__link">
+                <div class="view__title">VIEW ALL</div>
+                <div class="view__icon"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="info">
+        <div class="info__inner inner">
+          <div class="info__items">
+            <div class="info__item">
+              <div class="section-header section-header_left">
+                <h2 class="section-header__title">news</h2>
+                <p class="section-header__subtitle">ニュース</p>
+              </div>
+              <div class="info__contents">
+                <div class="info__content">
+                  <div class="info__meta">
+                    <time datetime="2024-1-05" class="info__time"
+                      >2024.01.05</time
+                    >
+                    <div class="info__span">お知らせ</div>
+                  </div>
+                  <p class="info__text">
+                    <a href=""
+                      >タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</a
+                    >
+                  </p>
+                </div>
+                <div class="info__content">
+                  <div class="info__meta">
+                    <time datetime="2024-1-05" class="info__time"
+                      >2024.01.05</time
+                    >
+                    <div class="info__span">お知らせ</div>
+                  </div>
+                  <p class="info__text">
+                    <a href=""
+                      >タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</a
+                    >
+                  </p>
+                </div>
+                <div class="info__content">
+                  <div class="info__meta">
+                    <time datetime="2024-1-05" class="info__time"
+                      >2024.01.05</time
+                    >
+                    <div class="info__span">お知らせ</div>
+                  </div>
+                  <p class="info__text">
+                    <a href=""
+                      >タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="view__content view__content_right">
+                <div class="view__inner">
+                  <a href="#" class="view__link">
+                    <div class="view__title">view more</div>
+                    <div class="view__icon"></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="info__item">
+              <div class="section-header section-header_left">
+                <h2 class="section-header__title">new open</h2>
+                <p class="section-header__subtitle">新店舗情報</p>
+              </div>
+              <div class="info__contents">
+                <div class="info__content">
+                  <div class="info__meta">
+                    <time datetime="2024-1-05" class="info__time"
+                      >2024.01.05</time
+                    >
+                    <div class="info__span">新店舗</div>
+                  </div>
+                  <p class="info__text">
+                    <a href=""
+                      >タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</a
+                    >
+                  </p>
+                </div>
+                <div class="info__content">
+                  <div class="info__meta">
+                    <time datetime="2024-1-05" class="info__time"
+                      >2024.01.05</time
+                    >
+                    <div class="info__span">リニューアル</div>
+                  </div>
+                  <p class="info__text">
+                    <a href=""
+                      >タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</a
+                    >
+                  </p>
+                </div>
+                <div class="info__content">
+                  <div class="info__meta">
+                    <time datetime="2024-1-05" class="info__time"
+                      >2024.01.05</time
+                    >
+                    <div class="info__span">新店舗</div>
+                  </div>
+                  <p class="info__text">
+                    <a href=""
+                      >タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="view__content view__content_right">
+                <div class="view__inner">
+                  <a href="#" class="view__link">
+                    <div class="view__title">view more</div>
+                    <div class="view__icon"></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info__imge1">
+            <img src="./assets/images/common/news.png" alt="焼肉の画像" />
+          </div>
+          <div class="info__image2">
+            <img
+              src="./assets/images/common/new-open.png"
+              alt="七輪焼きの画像"
+            />
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
-      <div class="footer__inner inner">
+      <div class="footer__inner">
         <div class="footer__wrapper">
           <div class="footer_container">
             <div class="logo logo_left">

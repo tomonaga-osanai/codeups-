@@ -1,0 +1,68 @@
+@use "global" as *;
+
+.location__ly {
+  margin-top: rem(40);
+}
+
+.location__item {
+  // margin-right: rem(15);
+  // margin-left: rem(15);
+}
+
+.location__body {
+  padding: rem(16);
+  background: #fbfbfb;
+  color: #222;
+  height: rem(193);
+  position: relative;
+}
+
+.location__title {
+  font-size: rem(18);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: rem(0.9);
+}
+
+.location__address,
+.location__tel {
+  margin-top: rem(16);
+  font-size: rem(15);
+  font-weight: 400;
+  line-height: 150%; /* 22.5px */
+  letter-spacing: rem(0.75);
+}
+
+.location__tel {
+  margin-top: rem(4);
+}
+
+.location__tag {
+  margin-top: rem(20);
+  display: flex;
+  gap: rem(5);
+  position: absolute;
+  bottom: rem(16);
+  line-height: 1;
+
+  @include mq("md") {
+    bottom: rem(20);
+  }
+}
+
+.tab__name {
+  background-color: #785555;
+  color: #fff;
+  padding: rem(6) rem(8);
+  color: #fff;
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: rem(0.7);
+
+  @include mq("md") {
+    padding: rem(6) rem(10);
+  }
+}
+
+

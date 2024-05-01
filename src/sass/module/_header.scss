@@ -2,10 +2,13 @@
 
 .header {
   height: rem(60);
-  background-color: pink;
   position: relative;
-
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  
   @include mq("md") {
+    margin-top: rem(18);
     height: rem(64);
   }
 }
@@ -25,4 +28,8 @@
   @include mq("md") {
     display: block;
   }
+}
+
+.header__sp-nav {
+
 }

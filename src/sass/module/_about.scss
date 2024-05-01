@@ -1,0 +1,176 @@
+@use "global" as *;
+
+.about {
+  color: #fff;
+  text-align: center;
+  padding-top: rem(20);
+  padding-bottom: rem(40);
+  margin-top: rem(60);
+  position: relative;
+}
+
+.about::after {
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: url(../../assets/images/common/about.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.about__inner {
+  max-width: rem(1080);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 100;
+}
+
+.about__inner > .section-header {
+  @include mq("md") {
+    text-align: left;
+  }
+}
+
+.about__inner > .view__content {
+  @include mq("md") {
+    text-align: right;
+    margin-top: rem(80);
+  }
+}
+
+.about__items {
+  margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}
+
+.about__item {
+  position: relative;
+
+  @include mq("md") {
+    text-align: left;
+    max-width: rem(480);
+    width: 100%;
+    background-image: url(../../assets/images/common/about-pc.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+.about__item span {
+  @include mq("md") {
+    // position: relative;
+  }
+}
+
+.about__item span::after {
+  @include mq("md") {
+    // background-color: red;
+    // background-image: url(../../assets/images/common/about-pc.png);
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-position: 0 0;
+    // position: absolute;
+    // width: rem(730);
+    // height: rem(300);
+    // top: -40px;
+    // left: -132px;
+  }
+}
+
+.about__item::after {
+  content: "";
+  width: rem(130);
+  height: rem(227);
+  position: absolute;
+  top: rem(-85);
+  right: rem(-15);
+  background-image: url(../../assets/images/common/about_sp_1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  @include mq("md") {
+    width: rem(624);
+    height: rem(624);
+    background-image: url(../../assets/images/common/about_pc_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    top: rem(-198);
+    right: rem(-700);
+  }
+}
+
+.about__item + .about__item {
+  margin-top: rem(60);
+
+  @include mq("md") {
+    margin-left: auto;
+    margin-top: rem(253);
+  }
+}
+
+.about__item + .about__item::after {
+  content: "";
+  width: rem(125);
+  height: rem(220);
+  position: absolute;
+  top: rem(-70);
+  left: rem(-15);
+  background-image: url(../../assets/images/common/about_sp_2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  @include mq("md") {
+    width: rem(624);
+    height: rem(624);
+    background-image: url(../../assets/images/common/about_pc_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    top: rem(-198);
+    left: rem(-670);
+  }
+}
+
+.about__title {
+  font-size: rem(22);
+  font-weight: $bold;
+  line-height: 1;
+  position: relative;
+  z-index: 200;
+}
+
+.about__text {
+  font-size: rem(15);
+  font-weight: $normal;
+  line-height: 160%; /* 24px */
+  letter-spacing: rem(0.75);
+  margin-top: rem(20);
+  position: relative;
+  z-index: 200;
+
+  @include mq("md") {
+    font-size: rem(18);
+    font-weight: 500;
+    letter-spacing: rem(0.9);
+  }
+}
+
+.about__text + .about__text {
+  margin-top: rem(16);
+}

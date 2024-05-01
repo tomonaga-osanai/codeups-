@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.location {
+  margin-top: rem(60);
+  padding-bottom: rem(40);
+  position: relative;
+  background-color: rebeccapurple;
+}
+
+.location::after {
+    content: "";
+    width: 100%;
+    height: rem(330);
+    // background-color: #7C0C0C;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
