@@ -1,67 +1,109 @@
 @use "global" as *;
 
 .menu {
-    color: $white;
-    margin-top: rem(60);
+  margin-top: rem(60);
 
-    @include mq("md") {
-      margin-top: rem(140);
-    }
+  @include mq("md") {
+    margin-top: rem(52);
+  }
 }
 
 .menu__nav {
-    margin-top: rem(40);
+  margin-top: rem(40);
 }
 
 .menu__nav-lists {
-    display: flex;
-    flex-wrap: wrap;
-    gap: rem(20);
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(20);
 
-    @include mq("md") {
-      justify-content: center;
-      gap: rem(30);
-    }
+  @include mq("md") {
+    justify-content: center;
+    gap: rem(30);
+  }
 }
 
-
 .menu__nav-list a {
-    border: 1px solid $white;
-    display: inline-block;
-    padding: rem(8) rem(12);
+  border: 1px solid $white;
+  display: inline-block;
+  padding: rem(8) rem(12);
+  transition: all 0.3s;
+  color: $white;
+}
 
+.menu__nav-list a:hover {
+  background-color: #e31919;
+  border: 1px solid #e31919;
 }
 
 .menu__items {
-    margin-top: rem(41);
-    display: grid;
-    gap: rem(20);
-    grid-template-columns: repeat(2,1fr);
-    align-items: center;
+  margin-top: rem(41);
+  display: grid;
+  gap: rem(20);
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
 
-    @include mq("md") {
-      grid-template-columns: repeat(4,1fr);
-      gap: rem(40);
-    }
+  @include mq("md") {
+    grid-template-columns: repeat(4, 1fr);
+    gap: rem(40);
+  }
+}
+
+.menu__item {
+  text-align: center;
+}
+
+.menu__item:hover .menu__img-title {
+  @include mq("md") {
+    color: #e31919;
+  }
+}
+
+.menu__item:hover .menu__img-title::after {
+  @include mq("md") {
+    width: 100%;
+  }
 }
 
 .menu__img {
-    // width: rem(160);
-    // height: rem(126);
-    aspect-ratio: 131 / 126;
+  aspect-ratio: 131 / 126;
 }
 
 .menu__img img {
-    width: 100%;
-    height: 100%;
-    // object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .menu__img-title {
-    text-align: center;
-    padding: rem(8) rem(12);
+  color: $white;
+  display: inline-block;
+  padding: rem(8) rem(12);
 
-    @include mq("md") {
-      padding: rem(20);
-    }
+  @include mq("md") {
+    position: relative;
+    transition: all 0.3s;
+    padding: rem(20);
+  }
+}
+
+.menu__img-title::after {
+
+  @include mq("md") {
+    content: "";
+    width: 0;
+    height: rem(2);
+    background-color: #e31919;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s;
+    margin-bottom: rem(10);
+  }
+}
+
+.menu .view__content {
+  @include mq("md") {
+    margin-top: rem(40);
+  }
 }

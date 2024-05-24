@@ -13,6 +13,11 @@
 
 .pc-nav__item {
   height: inherit;
+  transition: all 0.3s;
+}
+
+.pc-nav__item:hover {
+  opacity: 0.7;
 }
 
 .pc-nav__item a {
@@ -23,4 +28,8 @@
   height: inherit;
   display: flex;
   align-items: center;
+}
+
+.pc-nav__item a:hover {
+  // opacity: 0.7;
 }

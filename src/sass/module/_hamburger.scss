@@ -1,15 +1,16 @@
 @use "global" as *;
 
 .hamburger {
-  width: rem(16);
-  height: rem(15);
+  width: inherit;
+  height: inherit;
   position: relative;
+
 }
 
 .hamburger span {
   position: absolute;
   display: block;
-  width: inherit;
+  width: rem(16);
   height: rem(1);
   background-color: #fff;
   transition: all 0.3s;
@@ -17,23 +18,23 @@
 
 .hamburger span:nth-child(1) {
   width: rem(20);
-  top: rem(10);
+  top: rem(23);
   left: rem(22);
 }
 
 .hamburger span:nth-child(2) {
-  top: rem(16);
+  top: rem(30);
   left: rem(22);
 }
 
 .hamburger span:nth-child(3) {
-  top: rem(22);
+  top: rem(37);
   left: rem(22);
 }
 
 .hamburger.is-active span:nth-child(1) {
   width: rem(16);
-  top: 15px;
+  top: 30px;
   transform: rotate(45deg);
 }
 
@@ -43,7 +44,7 @@
 }
 
 .hamburger.is-active span:nth-child(3) {
-  top: 15px;
+  top: 30px;
   transform: rotate(-45deg);
 }
 

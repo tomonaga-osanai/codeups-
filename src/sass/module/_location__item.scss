@@ -5,8 +5,31 @@
 }
 
 .location__item {
-  // margin-right: rem(15);
-  // margin-left: rem(15);
+  margin-bottom: rem(38);
+
+  @include mq("md") {
+    margin-bottom: 0;
+  }
+}
+
+.location__img {
+  @include mq("md") {
+    overflow: hidden;
+  }
+}
+
+.location__img img {
+  @include mq("md") {
+    transition: all 0.3s;
+  }
+}
+
+
+
+.location__img img:hover {
+  @include mq("md") {
+    transform: scale(1.1);
+  }
 }
 
 .location__body {

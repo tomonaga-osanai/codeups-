@@ -4,6 +4,15 @@
   margin-top: rem(30);
 }
 
+.view__content:hover {
+  .view__icon {
+    @include mq("md") {
+      transform: translateX(5px);
+    }
+  }
+
+}
+
 .view__content_center {
   text-align: center;
 }
@@ -13,15 +22,19 @@
 }
 
 .view__inner {
-  padding: rem(10);
   border-bottom: 1px solid #fff;
   display: inline-block;
 }
 
 .view__link {
+  padding: rem(10);
   display: flex;
   align-items: center;
   gap: rem(10);
+
+  @include mq("md") {
+    padding: rem(12);
+  }
 }
 
 .view__title {
@@ -37,6 +50,7 @@
   background-color: #e31919;
   border-radius: 50%;
   position: relative;
+  transition: all 0.3s;
 }
 
 .view__icon::after {

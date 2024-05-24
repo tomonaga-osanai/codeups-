@@ -5,10 +5,16 @@
   flex-direction: column;
   gap: rem(6);
   text-align: center;
+  // clip-path: inset(0 100% 0 0);
+  transition: all 2s;
 
   @include mq("md") {
     gap: rem(10);
   }
+}
+
+.section-header.is-active {
+  clip-path: inset(0);
 }
 
 .section-header_left {

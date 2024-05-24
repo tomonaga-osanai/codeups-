@@ -1,0 +1,51 @@
+@use "global" as *;
+
+.pick-up {
+  margin-top: rem(60);
+  padding-bottom: rem(30);
+
+  @include mq("md") {
+    padding-bottom: 0;
+  }
+}
+
+.pick-up__inner {
+  position: relative;
+}
+
+.pick-up__swiper {
+  margin-top: rem(35);
+}
+
+.pick-up__title {
+  color: #fff;
+  text-align: center;
+  font-size: rem(18);
+  font-weight: $bold;
+  line-height: 1;
+  padding: rem(16) rem(20);
+}
+
+.pick-up__img {
+  overflow: hidden;
+}
+
+.pick-up__img img {
+  transition: all 0.3s;
+}
+
+.pick-up__img img:hover {
+  transform: scale(1.2);
+}
+
+.pick-up .swiper-button-prev {
+  transform: translateY(120px);
+}
+
+.pick-up .swiper-button-next {
+  transform: translateY(120px);
+
+
+}
+
+

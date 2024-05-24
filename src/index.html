@@ -80,53 +80,82 @@
     <main>
       <div class="mv">
         <div class="mv__inner">
-          <!-- <div class="mv__img1">
+          <div class="mv__img1">
             <img src="./assets/images/common/mv1.png" alt="焼き肉の画像１" />
-          </div> -->
+          </div>
           <div class="mv__title">
             <span>一口噛めば、旨味が走る。</span><br />
             極上炭火焼肉。
           </div>
-          <!-- <div class="mv__img2">
+          <div class="mv__img2">
             <img src="./assets/images/common/pc-mv2.png" alt="焼肉の画像２" />
-          </div> -->
+          </div>
         </div>
       </div>
 
-      <section class="about inner">
-        <div class="about__inner">
+      <section class="pick-up">
+        <div class="pick-up__inner inner">
+          <div class="section-header">
+            <h2 class="section-header__title">pick up</h2>
+            <p class="section-header__subtitle">CodeUps亭イチ押しメニュー</p>
+          </div>
+          <div class="swiper js-pick-up-swiper">
+            <div class="swiper-wrapper pick-up__swiper">
+              <div class="swiper-slide">
+                <div class="pick-up__img">
+                  <img src="./assets/images/common/pick-up1.png" alt="">
+                </div>
+                <p class="pick-up__title">限定復刻！和牛鬼の盛り合わせ</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="pick-up__img">
+                  <img src="./assets/images/common/pick-up2.png" alt="">
+                </div>
+                <p class="pick-up__title">数量限定！超厚切り牛タン</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="pick-up__img">
+                  <img src="./assets/images/common/pick-up3.png" alt="">
+                </div>
+                <p class="pick-up__title">日替わり食べ比べプレート</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="pick-up__img">
+                  <img src="./assets/images/common/pick-up4.png" alt="">
+                </div>
+                <p class="pick-up__title">黒毛和牛のミニステーキ</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"><span></span></div>
+          <div class="swiper-button-next"><span></span></div>
+          <div class="swiper-pagination pick-up__pagination js-pick-up-pagination"></div>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="about__inner inner">
           <div class="section-header">
             <h2 class="section-header__title">about</h2>
             <p class="section-header__subtitle">CodeUps亭のこだわり</p>
           </div>
           <div class="about__items">
             <div class="about__item">
-              <span>
-                <h3 class="about__title">厳選された極上肉</h3>
-                <p class="about__text">
-                  贅沢な焼肉体験を提供するため、<br class="u-mobile" />
-                  当店では産地や品質にこだわり抜きました。
-                </p>
-                <p class="about__text">
-                  新鮮で選りすぐりの肉を直接仕入れ、<br class="u-mobile" />
-                  一口噛むたびに広がる旨味と肉質の極上さが、<br
-                    class="u-mobile"
-                  />お客様に至福の瞬間をお届けします。
-                </p>
-              </span>
+              <h3 class="abut__title">厳選された極上肉</h3>
+              <div class="about__text">贅沢な焼肉体験を提供するため、<br class="u-mobile">
+                当店では産地や品質にこだわり抜きました。</div>
+              <div class="about__text">新鮮で選りすぐりの肉を直接仕入れ、<br class="u-mobile">
+                一口噛むたびに広がる旨味と肉質の極上さが、<br class="u-mobile">お客様に至福の瞬間をお届けします。</div>
             </div>
             <div class="about__item">
-              <h3 class="about__title">季節感ある焼肉体験</h3>
-              <p class="about__text">
-                季節の変化に合わせた旬の食材を活かし、<br class="u-mobile" />
+              <h3 class="abut__title">季節感ある焼肉体験</h3>
+              <div class="about__text">季節の変化に合わせた旬の食材を活かし、<br class="u-mobile">
                 焼肉メニューも季節感豊かにアップデート。
-              </p>
-              <p class="about__text">
-                食材の鮮度と旬の味わいが<br class="u-mobile" />
-                一体となったメニューをご提供し、<br class="u-mobile" />
-                お客様に季節感ある美味しいひとときを<br class="u-mobile" />
-                お届けします。
-              </p>
+                </div>
+              <div class="about__text">食材の鮮度と旬の味わいが <br class="u-mobile">
+                一体となったメニューをご提供し、<br class="u-mobile">
+                お客様に季節感ある美味しいひとときを<br class="u-mobile">
+                お届けします。</div>
             </div>
           </div>
           <div class="view__content">
@@ -143,7 +172,7 @@
       <section class="menu">
         <div class="menu__inner inner">
           <div class="section-header">
-            <h2 class="section-header__title">MENU</h2>
+            <h2 class="section-header__title">menu</h2>
             <p class="section-header__subtitle">メニュー</p>
           </div>
           <nav class="menu__nav">
@@ -156,16 +185,16 @@
             </ul>
           </nav>
           <div class="menu__items">
-            <div class="menu__item">
-              <div class="menu__img">
-                <img
-                  src="./assets/images/common/menu-img1.png"
-                  alt="盛り合わせの写真"
-                />
-              </div>
-              <div class="menu__img-title">盛り合わせ</div>
-            </div>
-            <div class="menu__item">
+            <a href="#" class="menu__item">
+                <div class="menu__img">
+                  <img
+                    src="./assets/images/common/menu-img1.png"
+                    alt="盛り合わせの写真"
+                  />
+                </div>
+                <div class="menu__img-title">盛り合わせ</div>
+            </a>
+            <a href="#" class="menu__item">
               <div class="menu__img">
                 <img
                   src="./assets/images/common/menu-img2.png"
@@ -173,32 +202,32 @@
                 />
               </div>
               <div class="menu__img-title">数量限定</div>
-            </div>
-            <div class="menu__item">
+            </a>
+            <a href="#" class="menu__item">
               <div class="menu__img">
                 <img src="./assets/images/common/menu-img3.png" alt="カルビ" />
               </div>
               <div class="menu__img-title">カルビ</div>
-            </div>
-            <div class="menu__item">
+            </a>
+            <a href="#" class="menu__item">
               <div class="menu__img">
                 <img src="./assets/images/common/menu-img4.png" alt="ロース" />
               </div>
               <div class="menu__img-title">ロース</div>
-            </div>
-            <div class="menu__item">
+            </a>
+            <a href="#" class="menu__item">
               <div class="menu__img">
                 <img src="./assets/images/common/menu-img5.png" alt="ハラミ" />
               </div>
               <div class="menu__img-title">ハラミ</div>
-            </div>
-            <div class="menu__item">
+            </a>
+            <a href="#" class="menu__item">
               <div class="menu__img">
                 <img src="./assets/images/common/menu-img6.png" alt="タン" />
               </div>
               <div class="menu__img-title">タン</div>
-            </div>
-            <div class="menu__item">
+            </a>
+            <a href="#" class="menu__item">
               <div class="menu__img">
                 <img
                   src="./assets/images/common/menu-img7.png"
@@ -206,18 +235,18 @@
                 />
               </div>
               <div class="menu__img-title">ホルモン</div>
-            </div>
-            <div class="menu__item">
+            </a>
+            <a href="#" class="menu__item">
               <div class="menu__img">
                 <img src="./assets/images/common/menu-img8.png" alt="鶏、豚" />
               </div>
               <div class="menu__img-title">鶏、豚</div>
-            </div>
+            </a>
           </div>
           <div class="view__content view__content_center">
             <div class="view__inner">
               <a href="#" class="view__link">
-                <div class="view__title">view more</div>
+                <div class="view__title">view all</div>
                 <div class="view__icon"></div>
               </a>
             </div>
@@ -232,8 +261,8 @@
             <p class="section-header__subtitle">店舗情報</p>
           </div>
           <div class="swiper js-location-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide location__ly">
+            <div class="swiper-wrapper location__ly">
+              <div class="swiper-slide">
                 <div class="location__item">
                   <div class="location__img">
                     <img src="../assets/images/common/location1.jpg" alt="" />
@@ -252,7 +281,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide location__ly">
+              <div class="swiper-slide">
                 <div class="location__item">
                   <div class="location__img">
                     <img src="../assets/images/common/location2.jpg" alt="" />
@@ -272,7 +301,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide location__ly">
+              <div class="swiper-slide">
                 <div class="location__item">
                   <div class="location__img">
                     <img src="../assets/images/common/location3.jpg" alt="" />
@@ -292,7 +321,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide location__ly">
+              <div class="swiper-slide">
                 <div class="location__item">
                   <div class="location__img">
                     <img src="../assets/images/common/location4.jpg" alt="" />
@@ -312,7 +341,7 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide location__ly">
+              <div class="swiper-slide">
                 <div class="location__item">
                   <div class="location__img">
                     <img src="../assets/images/common/location5.jpg" alt="" />
@@ -334,7 +363,9 @@
               </div>
             </div>
           </div>
-          <div class="swiper-pagination js-location-pagination"></div>
+          <div class="swiper-button-prev"><span></span></div>
+          <div class="swiper-button-next"><span></span></div>
+          <div class="swiper-pagination location__pagination js-location-pagination"></div>
           <div class="view__content view__content_right">
             <div class="view__inner">
               <a href="#" class="view__link">
@@ -438,9 +469,7 @@
                 </div>
                 <div class="info__content">
                   <div class="info__meta">
-                    <time datetime="2024-1-05" class="info__time"
-                      >2024.01.05</time
-                    >
+                    <time datetime="2024-1-05" class="info__time">2024.01.05</time>
                     <div class="info__span">新店舗</div>
                   </div>
                   <p class="info__text">
@@ -459,21 +488,24 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="info__imge1">
-            <img src="./assets/images/common/news.png" alt="焼肉の画像" />
-          </div>
-          <div class="info__image2">
-            <img
-              src="./assets/images/common/new-open.png"
-              alt="七輪焼きの画像"
-            />
+            <div class="info__imge1">
+              <img src="./assets/images/common/news.png" alt="焼肉の画像" />
+            </div>
+            <div class="info__image2">
+                <div class="info__image2-wrapper">
+                  <img
+                    src="./assets/images/common/new-open.png"
+                    alt="七輪焼きの画像"
+                    />
+                </div>
+              </div>
           </div>
         </div>
       </section>
     </main>
+
     <footer class="footer">
-      <div class="footer__inner">
+      <div class="footer__inner inner">
         <div class="footer__wrapper">
           <div class="footer_container">
             <div class="logo logo_left">

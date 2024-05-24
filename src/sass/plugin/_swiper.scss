@@ -1,5 +1,135 @@
 @use "global" as *;
 
+.location .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: rem(66);
+}
+
+.pick-up .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: rem(-22);
+}
+
+.swiper-pagination-bullet {
+  background-color: #c5c5c5;
+  opacity: 1;
+}
+
 .swiper-pagination-bullet-active {
-    // background-color: pink;
+  background-color: #e31919;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 rem(6);
+}
+
+.swiper-pagination {
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+  // position: relative;
+
+  @include mq("md") {
+    display: block;
+  }
+}
+
+// .swiper-button-prev span,
+// .swiper-button-next span {
+//   transition: all 0.9s;
+// }
+
+.swiper-button-prev:after,
+.swiper-button-next::after {
+  content: "";
+  width: rem(50);
+  height: rem(50);
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #e31919;
+  position: absolute;
+  bottom: rem(-7);
+  right: rem(-10);
+  // transition: all 0.3s;
+}
+
+.swiper-button-prev span,
+.swiper-button-next span {
+  // transition: all 0.9s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  &::after {
+    background-color: #e31919;
+  }
+
+  span:before,
+  span::after {
+    background-color: #fff;
+  }
+}
+
+.swiper-button-prev span::before,
+.swiper-button-prev span::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 11px;
+  background-color: #e31919;
+  z-index: 1;
+  left: 46%;
+}
+
+.swiper-button-prev span::before {
+  top: 38%;
+  transform: rotate(45deg);
+}
+
+.swiper-button-prev span::after {
+  top: 54%;
+  transform: rotate(-45deg);
+}
+
+
+.swiper-button-next span::before,
+.swiper-button-next span::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 11px;
+  background-color: #e31919;
+  z-index: 1;
+  left: 50%;
+}
+
+.swiper-button-next span::before {
+  top: 38%;
+  transform: rotate(-45deg);
+}
+
+.swiper-button-next span::after {
+  top: 54%;
+  transform: rotate(45deg);
+}
+
+
+
+.swiper-button-prev:after {
+  // background-image: url(../../assets/images/common/arrow-prev.png);
+  // background-repeat: no-repeat;
+  // background-position: center center;
+  // background-size: cover;
+}
+
+.swiper-button-next::after {
+  // background-image: url(../../assets/images/common/arrow-next.png);
+  // background-repeat: no-repeat;
+  // background-position: center center;
+  // background-size: cover;
 }
