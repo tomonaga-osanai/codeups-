@@ -5,10 +5,10 @@
   flex-direction: column;
   gap: rem(6);
   text-align: center;
-  // clip-path: inset(0 100% 0 0);
   transition: all 2s;
-
+  
   @include mq("md") {
+    clip-path: inset(0 100% 0 0);
     gap: rem(10);
   }
 }

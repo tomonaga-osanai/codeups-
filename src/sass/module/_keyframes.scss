@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.mv__img1,
+.mv__img2 {
+  @include mq("md") {
+    animation-name: fadeIn;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

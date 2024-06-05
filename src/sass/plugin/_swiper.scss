@@ -1,5 +1,7 @@
 @use "global" as *;
 
+//ページネーション
+
 .location .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: rem(66);
 }
@@ -29,107 +31,60 @@
   }
 }
 
+//ボタン
+
 .swiper-button-prev,
 .swiper-button-next {
   display: none;
-  // position: relative;
+  width: rem(50);
+  height: rem(50);
+  transition: all .3s;
 
   @include mq("md") {
-    display: block;
+    display: block;border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #e31919;
+    background-image: url(../../assets/images/common/arrow-next.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
   }
 }
 
-// .swiper-button-prev span,
-// .swiper-button-next span {
-//   transition: all 0.9s;
-// }
+.swiper-button-prev {
+  @include mq("md") {
+    // left: 0;
+    transform: rotate(180deg);
+  }
+}
+
+.pick-up .swiper-button-next,
+.pick-up .swiper-button-prev {
+  @include mq("md") {
+    // right: rem(10);
+    // transform: translateY(rem(90));
+  }
+
+}
 
 .swiper-button-prev:after,
 .swiper-button-next::after {
   content: "";
-  width: rem(50);
-  height: rem(50);
-  background-color: #fff;
-  border-radius: 50%;
-  border: 2px solid #e31919;
-  position: absolute;
-  bottom: rem(-7);
-  right: rem(-10);
-  // transition: all 0.3s;
 }
 
-.swiper-button-prev span,
-.swiper-button-next span {
-  // transition: all 0.9s;
+.pick-up .swiper-button-prev,
+.pick-up .swiper-button-next {
+  top: var(--swiper-navigation-top-offset, 68%);
+}
+
+.location .swiper-button-prev,
+.location .swiper-button-next {
+  top: var(--swiper-navigation-top-offset, 55%);
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  &::after {
     background-color: #e31919;
-  }
-
-  span:before,
-  span::after {
-    background-color: #fff;
-  }
+    background-image: url(../../assets/images/common/arrow-hover.png);
 }
 
-.swiper-button-prev span::before,
-.swiper-button-prev span::after {
-  position: absolute;
-  content: "";
-  width: 2px;
-  height: 11px;
-  background-color: #e31919;
-  z-index: 1;
-  left: 46%;
-}
-
-.swiper-button-prev span::before {
-  top: 38%;
-  transform: rotate(45deg);
-}
-
-.swiper-button-prev span::after {
-  top: 54%;
-  transform: rotate(-45deg);
-}
-
-
-.swiper-button-next span::before,
-.swiper-button-next span::after {
-  position: absolute;
-  content: "";
-  width: 2px;
-  height: 11px;
-  background-color: #e31919;
-  z-index: 1;
-  left: 50%;
-}
-
-.swiper-button-next span::before {
-  top: 38%;
-  transform: rotate(-45deg);
-}
-
-.swiper-button-next span::after {
-  top: 54%;
-  transform: rotate(45deg);
-}
-
-
-
-.swiper-button-prev:after {
-  // background-image: url(../../assets/images/common/arrow-prev.png);
-  // background-repeat: no-repeat;
-  // background-position: center center;
-  // background-size: cover;
-}
-
-.swiper-button-next::after {
-  // background-image: url(../../assets/images/common/arrow-next.png);
-  // background-repeat: no-repeat;
-  // background-position: center center;
-  // background-size: cover;
-}

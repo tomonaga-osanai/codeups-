@@ -38,7 +38,16 @@
 
   @include mq("md") {
     margin-top: rem(20);
+    transform: translatex(-20px);
+    opacity: 0;
   }
+}
+
+.info__contents.is-active {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.8s cubic-bezier(0.515, 0.005, 0.505, 1),
+    transform 0.8s cubic-bezier(0.515, 0.005, 0.505, 1);
 }
 
 .info__content {
@@ -50,7 +59,6 @@
     max-width: 550px;
     width: 100%;
   }
-
 }
 
 .info__meta {
@@ -117,16 +125,35 @@
     max-width: rem(559);
     top: rem(148);
     right: rem(40);
+    opacity: 0;
   }
 }
 
-.info__image1 img {
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+    // transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    // transform: none;
+  }
+}
+
+.info__imge1 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.info__image2 {
+.info__imge2 {
   position: absolute;
   bottom: 0;
   left: rem(-14);
@@ -134,22 +161,22 @@
   max-width: rem(234.534);
   width: 100%;
   mix-blend-mode: screen;
-  // box-shadow: inset 9px 16px 27px 7px #000;
 
   @include mq("md") {
     aspect-ratio: 797 / 531;
     max-width: rem(797);
     left: rem(-48);
+    opacity: 0;
   }
 }
 
-.info__image2::after {
+.info__imge2::after {
   width: 100%;
   height: 100%;
   box-shadow: inset 9px 16px 27px 7px #000;
 }
 
-.info__image2 img {
+.info__imge2 img {
   background-blend-mode: screen;
   width: 100%;
   height: 100%;
@@ -157,11 +184,11 @@
   // mask-image: linear-gradient(-45deg, black 60%, transparent);
 }
 
-.info__image2-wrapper {
+.info__imge2-wrapper {
   position: relative;
 }
 
-.info__image2-wrapper::after {
+.info__imge2-wrapper::after {
   content: "";
   position: absolute;
   top: 0;
@@ -170,5 +197,3 @@
   height: 100%;
   box-shadow: inset 33px 16px 27px 7px #000;
 }
-
-
